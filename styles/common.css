@@ -1,0 +1,17 @@
+:root {
+    --col-bg: #fff;
+    --col-title: #fafafa;
+    --col-text: #000;
+    --col-markup: #f8adbd;
+    
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header .custom-nav ul {
+    list-style-type: none;
+    display: flex;
+}
