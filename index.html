@@ -8,39 +8,102 @@
   <link rel="stylesheet" href="styles/common.css">
 </head>
 
-<body class="dark">
+<body id="home-page" class="dark">
   <header class="header">
     <img class="background img" src="" alt="">
     <nav class="custom-nav">
       <ul class="list">
         <li class="item">
-          <a class="btn" href="">Enlace</a>
+          <a class="btn" href="video.html">Vídeo</a>
         </li>
         <li class="item">
-          <a class="btn" href="">Enlace</a>
+          <a class="btn" href="projects.html">Mis proyectos</a>
         </li>
       </ul>
     </nav>
   </header>
-  <section class="banner">
-    <div class="image"></div>
-    <div class="content">
-      <h2>Hola hola</h2>
-      <p></p>
-      <p></p>
-    </div>
-  </section>
   <main>
-    <section class="info">
-      <div>
-        <h2></h2>
-        <p></p>
+    <section class="about">
+      <div class="image"></div>
+      <div class="content">
+        <h1>Sobre mi</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia inventore neque ut recusandae repellat, ab
+          commodi amet quas voluptatem exercitationem adipisci voluptas distinctio, maiores odio porro explicabo
+          deleniti
+          velit at!</p>
+        <p>habilidades:</p>
+        <p>--insertar barras de progreso animadas--</p>
       </div>
+    </section>
+    <section class="banner">
+      <img src="assets/app/banner1-movil.jpg" alt="Paisaje de bosque en un atardecer" width="100%">
+    </section>
+    <section>
+      <form action="contactme" method="post">
+        <fieldset>
+          <div>
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" required>
+          </div>
+          <div>
+            <label for="lastname">Apellidos:</label>
+            <input type="text" name="lastname" id="lastname" required>
+          </div>
+          <div>
+            <label for="phonenumber">Número de teléfono:</label>
+            <input type="text" name="phonenumber" id="phonenumber" required>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>¿Cómo me conociste?</legend>
+          <ul>
+            <li>
+              <input type="radio" name="uni" id="uni" required>
+              <label for="uni">Universidad</label>
+            </li>
+            <li>
+              <input type="radio" name="kc" id="kc" required>
+              <label for="kc">KeepCoding kick-off</label>
+            </li>
+            <li>
+              <input type="radio" name="school" id="school" required>
+              <label for="school">Colegio</label>
+            </li>
+            <li>
+              <input type="radio" name="github" id="github" required>
+              <label for="github">Por GitHub</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <div>
+            <label for="github-tag">Tag de github:</label>
+            <input type="text" name="github-tag" id="github-tag" pattern="^@[^\s]+" required>
+          </div>
+          <div>
+            <label for="description">Descripción</label>
+            <input type="textarea" name="description" id="description" required>
+          </div>
+          <div>
+            <label for="news">Acceder a newsletter</label>
+            <input type="checkbox" name="news" id="news">
+          </div>
+          <div>
+            <input type="submit" name="save-btn" id="save-btn" value="Guardar">
+            <input type="button" name="reset-btn" id="reset-btn" value="Resetear">
+          </div>
+
+        </fieldset>
+
+      </form>
     </section>
 
   </main>
   <footer class="footer">
-    <p></p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/hectorbenedicte/" target="_blank">LinkedIn</a> |
+      <a href="https://www.github.com/bhect0/" target="_blank">GitHub</a>
+    </div>
   </footer>
 </body>
 
