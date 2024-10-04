@@ -9,12 +9,26 @@
 body {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 .header {
-    background-color: grey;
+    
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    background-image: url('/assets/app/banner1-movil.jpg');
+    background-size: cover; /* Hace que la imagen cubra todo el div sin perder proporción */
+  background-position: center; /* Centra la imagen en el div */
+  background-repeat: no-repeat;
+}
+
+.header img.profile {
+    border-radius: 50%;
+    width: 30vw;
+    margin-left: 10px;
+    position: relative;
+    bottom: -30px;
 }
 
 .header .custom-nav ul {
@@ -24,6 +38,132 @@ body {
 
 .header .custom-nav li {
     margin-right: 12px;
+}
+
+.header .custom-nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+main {
+    margin: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+form {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para etiquetas */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Estilos para inputs y selects */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%; /* Hace que los campos ocupen el ancho completo del formulario */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+    font-size: 1em;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilos para focus en inputs */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff; /* Cambia el borde a azul en foco */
+    outline: none; /* Quita el borde exterior */
+}
+
+/* Estilo para botones */
+button,
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul para el botón */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover en botones */
+button:hover,
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Oscurece el color en hover */
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#home-page .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#home-page .skills .skill {
+    width: 120px;
+    text-align: center;
+}
+
+#home-page .skills .skill .ctn-progress {
+    border: 1px solid blue;
+}
+
+#home-page .skills .skill .progress {
+    height: 20px;
+    background-color: #f8adbd;
+    animation: progress 2s linear forwards;
+}
+
+#home-page .skills #php.skill .progress { max-width: 70%; }
+#home-page .skills #moodle.skill .progress { max-width: 70%; }
+#home-page .skills #js.skill .progress { max-width: 20%; }
+#home-page .skills #css.skill .progress { max-width: 80%; }
+#home-page .skills #html.skill .progress { max-width: 70%; }
+#home-page .skills #sql.skill .progress { max-width: 70%; }
+#home-page .skills #wordpress.skill .progress { max-width: 40%; }
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 #projects-page .projects-grid {
@@ -37,11 +177,6 @@ body {
     flex-direction: column;
     max-width: 45vw;
 }
-
-#projects-page .projects-grid .item img { 
-    
-}
-
 
 .footer {
     margin-top: 40px;
