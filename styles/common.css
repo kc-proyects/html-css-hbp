@@ -1,8 +1,11 @@
 :root {
+    --col-primary: #06184b;
+
     --col-bg: #fff;
     --col-title: #fafafa;
     --col-text: #000;
     --col-markup: #f8adbd;
+    --col-nav-link: #fff;
     
 }
 
@@ -16,19 +19,21 @@ body {
     
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+    padding: 10px 0;
     background-image: url('/assets/app/banner1-movil.jpg');
     background-size: cover; /* Hace que la imagen cubra todo el div sin perder proporción */
-  background-position: center; /* Centra la imagen en el div */
-  background-repeat: no-repeat;
+    background-position: center; /* Centra la imagen en el div */
+    background-repeat: no-repeat;
 }
 
 .header img.profile {
     border-radius: 50%;
     width: 30vw;
+    max-width: 140px;
     margin-left: 10px;
     position: relative;
-    bottom: -30px;
+    /*bottom: -30px;*/
 }
 
 .header .custom-nav ul {
@@ -36,26 +41,28 @@ body {
     display: flex;
 }
 
-.header .custom-nav li {
+.header .custom-nav .item .btn {
     margin-right: 12px;
 }
 
-.header .custom-nav li a {
+.header .custom-nav .item .btn {
     text-decoration: none;
     font-weight: bold;
-    color: #fff;
+    color: var(--col-nav-link);
+    transition: color 0.8s ease;
 }
 
-main {
-    margin: 10px;
+.header .custom-nav .item .btn:hover {
+    color: var(--col-markup);
 }
 
 section {
-    margin-bottom: 20px;
+    margin: 10px 0 20px 10px;
 }
 
+.banner { margin: 0; }
+
 form {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
@@ -71,7 +78,6 @@ legend {
     margin-bottom: 10px;
 }
 
-/* Estilos para etiquetas */
 label {
     display: block;
     font-weight: bold;
@@ -79,36 +85,30 @@ label {
     color: #333;
 }
 
-/* Estilos para inputs y selects */
 input[type="text"],
 input[type="email"],
 input[type="password"],
 select,
 textarea {
-    width: 100%; /* Hace que los campos ocupen el ancho completo del formulario */
+    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+    box-sizing: border-box; 
     font-size: 1em;
     background-color: #fff;
     transition: border-color 0.3s ease;
 }
 
-/* Estilos para focus en inputs */
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: #007bff; /* Cambia el borde a azul en foco */
-    outline: none; /* Quita el borde exterior */
+#contactme ul {
+    list-style-type: none;
 }
 
-/* Estilo para botones */
-button,
-input[type="submit"] {
+#contactme input[type="button"], 
+#contactme input[type="submit"] {
     padding: 10px 20px;
-    background-color: #007bff; /* Azul para el botón */
+    background-color: var(--col-primary);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -117,10 +117,10 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-/* Hover en botones */
-button:hover,
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Oscurece el color en hover */
+
+#contactme input[type="button"]:hover, 
+#contactme input[type="submit"]:hover {
+    background-color: var(--col-markup);
 }
 
 textarea {
@@ -178,9 +178,38 @@ textarea {
     max-width: 45vw;
 }
 
+#video-page video {
+    animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }    
+    100% {
+        opacity: 1;
+    }
+}
+
 .footer {
     margin-top: 40px;
     background-color: grey;
     display: flex;
     justify-content: center;
+}
+
+/* media queries */
+
+@media screen and (width > 768px) {
+    main {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (width > 1024px) {
+    main {
+        width: 60%;
+        margin: auto;
+    }
 }
