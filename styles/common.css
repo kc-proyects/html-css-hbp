@@ -28,7 +28,7 @@ h2 {
 }
 
 section {
-    margin: 0 0 40px 0;
+    margin: 0 10px 40px 10px;
 }
 
 section.bg-green {
@@ -53,6 +53,7 @@ section.bg-green h2 {
     img.profile {
         border-radius: 50%;
         width: 30vw;
+        margin-left: 10px;
         max-width: 140px;
         position: relative;
         bottom: -30px;
@@ -79,8 +80,6 @@ section.bg-green h2 {
     }
 
 }
-
-.banner { margin: 0; }
 
 form#contactme {
     textarea,
@@ -111,13 +110,14 @@ form#contactme {
         background-color: var(--col-markup);
     }
 
-    fieldset { border: none; }
+    fieldset { border: none; padding: 0;}
     
 } 
 
 #home-page .skills {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -158,6 +158,14 @@ form#contactme {
     }
 }
 
+#home-page #banner {
+    background-image: url('/assets/app/banner.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60dvh;
+}
+
 #projects-page .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -167,7 +175,7 @@ form#contactme {
 #projects-page .projects-grid .item { 
     display: flex;
     flex-direction: column;
-    max-width: 45vw;
+    max-width: 35vw;
 }
 
 #video-page video {
@@ -212,5 +220,19 @@ form#contactme {
     .header .container {
         width: 60%;
         margin: auto;
+    }
+}
+
+@media screen and (width > 768px) {
+    main,
+    .header .container {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (width > 512px) {
+    #home-page #banner {
+        background-image: url('/assets/app/banner-movil.jpg');
     }
 }
