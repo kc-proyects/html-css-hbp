@@ -159,7 +159,7 @@ form#contactme {
 }
 
 #home-page #banner {
-    background-image: url('/assets/app/banner-movil.jpg');
+    background-image: url('../assets/app/banner-movil.jpg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -233,6 +233,6 @@ form#contactme {
 
 @media screen and (width > 512px) {
     #home-page #banner {
-        background-image: url('/assets/app/banner.jpg');
+        background-image: url('../assets/app/banner.jpg');
     }
 }
