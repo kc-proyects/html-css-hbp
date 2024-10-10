@@ -1,0 +1,58 @@
+#home-page .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+#home-page .skills .skill {
+    width: 120px;
+    text-align: center;
+}
+
+#home-page .skills .skill .ctn-progress {
+    border: 1px solid var(--col-1);
+}
+
+#home-page .skills .skill .progress {
+    height: 20px;
+    background-color: var(--col-1);
+    animation: progress 2s linear forwards;
+}
+
+#home-page .skills .skill .progress,
+#home-page .skills .skill .ctn-progress {
+    border-radius: 10px;
+}
+
+#home-page .skills #php.skill .progress { max-width: 70%; }
+#home-page .skills #moodle.skill .progress { max-width: 70%; }
+#home-page .skills #js.skill .progress { max-width: 20%; }
+#home-page .skills #css.skill .progress { max-width: 80%; }
+#home-page .skills #html.skill .progress { max-width: 70%; }
+#home-page .skills #sql.skill .progress { max-width: 70%; }
+#home-page .skills #wordpress.skill .progress { max-width: 40%; }
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#home-page #banner {
+    background-image: url('../assets/app/banner-movil.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60dvh;
+}
+
+
+@media screen and (width > 512px) {
+    #home-page #banner {
+        background-image: url('../assets/app/banner.jpg');
+    }
+}

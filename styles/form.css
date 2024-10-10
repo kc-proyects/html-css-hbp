@@ -1,0 +1,37 @@
+form#contactme {
+    textarea,
+    input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 12px;
+    }
+
+    ul li input,
+    input[type="checkbox"] { width: auto; }
+
+    input[type="reset"], 
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: var(--col-1);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="reset"]:hover, 
+    input[type="submit"]:hover {
+        background-color: var(--col-markup);
+    }
+    fieldset { border: none; padding: 0;}
+} 
+
+@media screen and (width > 768px) {
+    section:has(form#contactme) {
+        max-width: 50%;
+        margin: auto;
+    }
+}

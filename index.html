@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Héctor Benedicte</title>
   <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 
 <body id="home-page" class="light">
@@ -86,7 +88,7 @@
     <section id="banner">
       <!-- esta seccion es utilizada para poner el banner de fondo -->
     </section>
-    <section>
+    <section class="border-green">
       <form id="contactme" action="contactme" method="post">
         <fieldset>
           <div>
@@ -98,7 +100,7 @@
             <input type="text" name="lastname" id="lastname" required>
           </div>
           <div>
-            <label for="phonenumber">Número de teléfono:</label>
+            <label for="phonenumber">Teléfono:</label>
             <input type="tel" name="phonenumber" id="phonenumber" required>
           </div>
         </fieldset>
@@ -106,19 +108,19 @@
           <legend>¿Cómo me conociste?</legend>
           <ul>
             <li>
-              <input type="radio" name="uni" id="uni" required>
+              <input type="radio" name="knownoption" id="uni" required>
               <label for="uni">Universidad</label>
             </li>
             <li>
-              <input type="radio" name="kc" id="kc" required>
+              <input type="radio" name="knownoption" id="kc" required>
               <label for="kc">KeepCoding kick-off</label>
             </li>
             <li>
-              <input type="radio" name="school" id="school" required>
+              <input type="radio" name="knownoption" id="school" required>
               <label for="school">Colegio</label>
             </li>
             <li>
-              <input type="radio" name="github" id="github" required>
+              <input type="radio" name="knownoption" id="github" required>
               <label for="github">Por GitHub</label>
             </li>
           </ul>
@@ -138,7 +140,7 @@
           </div>
           <div>
             <input type="submit" name="save-btn" id="save-btn" value="Guardar">
-            <input type="button" name="reset-btn" id="reset-btn" value="Resetear">
+            <input type="reset" name="reset-btn" id="reset-btn" value="Resetear">
           </div>
 
         </fieldset>

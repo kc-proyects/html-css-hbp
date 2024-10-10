@@ -31,11 +31,23 @@ section {
     margin: 0 10px 40px 10px;
 }
 
-section.bg-green {
-    background-color: var(--col-5);
-    padding: 30px;
+section.bg-green,
+section.border-green {
     border-radius: 20px;
 }
+
+section.bg-green {
+    padding: 30px;
+    background-color: var(--col-5);
+}
+
+@media screen and (width > 768px) {
+    section.border-green {
+        border: 2px solid var(--col-2);
+        padding: 30px 40px;
+    }
+}
+
 section.bg-green h2 {
     margin-top: 0;
 }
@@ -81,116 +93,6 @@ section.bg-green h2 {
 
 }
 
-form#contactme {
-    textarea,
-    input {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    ul {
-        list-style-type: none;
-        padding-left: 12px;
-    }
-
-    ul li input,
-    input[type="checkbox"] { width: auto; }
-
-    input[type="button"], 
-    input[type="submit"] {
-        padding: 10px 20px;
-        background-color: var(--col-1);
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-    }
-
-    input[type="button"]:hover, 
-    input[type="submit"]:hover {
-        background-color: var(--col-markup);
-    }
-
-    fieldset { border: none; padding: 0;}
-    
-} 
-
-#home-page .skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
-
-#home-page .skills .skill {
-    width: 120px;
-    text-align: center;
-}
-
-#home-page .skills .skill .ctn-progress {
-    border: 1px solid var(--col-1);
-}
-
-#home-page .skills .skill .progress {
-    height: 20px;
-    background-color: var(--col-1);
-    animation: progress 2s linear forwards;
-}
-
-#home-page .skills .skill .progress,
-#home-page .skills .skill .ctn-progress {
-    border-radius: 10px;
-}
-
-#home-page .skills #php.skill .progress { max-width: 70%; }
-#home-page .skills #moodle.skill .progress { max-width: 70%; }
-#home-page .skills #js.skill .progress { max-width: 20%; }
-#home-page .skills #css.skill .progress { max-width: 80%; }
-#home-page .skills #html.skill .progress { max-width: 70%; }
-#home-page .skills #sql.skill .progress { max-width: 70%; }
-#home-page .skills #wordpress.skill .progress { max-width: 40%; }
-
-@keyframes progress {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-#home-page #banner {
-    background-image: url('../assets/app/banner-movil.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 60dvh;
-}
-
-#projects-page .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-}
-
-#projects-page .projects-grid .item { 
-    display: flex;
-    flex-direction: column;
-    max-width: 35vw;
-}
-
-#video-page video {
-    animation: fadeIn 5s forwards;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }    
-    100% {
-        opacity: 1;
-    }
-}
-
 .footer {
     margin-top: 40px;
     background-color: var(--col-1);
@@ -202,11 +104,10 @@ form#contactme {
 .footer .links,
 .footer .links a {
     color: var(--col-nav-link);
+    transition: color 1s;
 }
-
 .footer .links a:hover { color: var(--col-markup); }
 
-/* media queries */
 @media screen and (width > 768px) {
     main,
     .header .container {
@@ -220,19 +121,5 @@ form#contactme {
     .header .container {
         width: 60%;
         margin: auto;
-    }
-}
-
-@media screen and (width > 768px) {
-    main,
-    .header .container {
-        width: 80%;
-        margin: auto;
-    }
-}
-
-@media screen and (width > 512px) {
-    #home-page #banner {
-        background-image: url('../assets/app/banner.jpg');
     }
 }
