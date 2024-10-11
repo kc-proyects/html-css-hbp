@@ -4,6 +4,7 @@
     --col-3: #384c1a;
     --col-4: #1C260D;
     --col-5: #e9f2da;
+    --col-grey: #fafafa;
 
     --col-bg-blue: var(--col-3);
     --col-bg: #fff;
@@ -121,5 +122,63 @@ section.bg-green h2 {
     .header .container {
         width: 60%;
         margin: auto;
+    }
+}
+
+/* burger menu solo para moviles */
+#menu-toggle { display: none; }
+
+@media screen and (width < 425px) {
+    .custom-nav {
+        .hamburger {
+            cursor: pointer;
+            display: inline-block;
+            width: 30px;
+            height: 25px;
+            position: relative;
+            margin-right: 8px;
+        }
+        
+        .hamburger span {
+            display: block;
+            background: var(--col-markup);
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            transition: all 0.8s ease;
+        }
+        
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 10px; }
+        .hamburger span:nth-child(3) { top: 20px; }
+
+        #menu-toggle:checked + .hamburger span:nth-child(1),
+        #menu-toggle:checked + .hamburger span:nth-child(2),
+        #menu-toggle:checked + .hamburger span:nth-child(3) {
+            transform: rotate(45deg);
+            top: 10px;
+        }
+        #menu-toggle:checked + .hamburger span:nth-child(2) { opacity: 0; }
+        #menu-toggle:checked + .hamburger span:nth-child(3) { transform: rotate(-45deg); }
+        #menu-toggle:checked ~ ul#links.list { display: block; }
+        
+        ul#links.list {
+            display: none;
+            background-color: var(--col-grey);
+            border-radius: 8px;
+            border: 1px solid var(--col-markup);
+            padding: 20px;
+            width: 200px;
+            position: absolute;
+            right: 0;
+        }
+        
+        ul#links.list li { margin-bottom: 15px; }
+        ul#links.list li:last-child { margin-bottom: 0; }
+        ul#links.list li a {
+            text-decoration: none;
+            color: var(--col-text);
+            font-size: 18px;
+        }
     }
 }
